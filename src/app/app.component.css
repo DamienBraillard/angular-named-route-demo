@@ -1,0 +1,9 @@
+a {
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+}
+
+a.current {
+  font-weight: bold;
+}

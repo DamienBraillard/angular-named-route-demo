@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NamedRoutesService } from 'ng-named-routes';
 
 @Component({
   selector: 'app-foo',
@@ -8,12 +9,12 @@ import { Router } from '@angular/router';
 })
 export class FooComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private namedRoutesService: NamedRoutesService) { }
 
   ngOnInit() {
   }
 
   goHome() {
-    this.router.navigate(['home']);
+    this.router.navigate([this.namedRoutesService.getRoute('route.home')]);
   }
 }

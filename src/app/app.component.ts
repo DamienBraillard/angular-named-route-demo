@@ -1,3 +1,4 @@
+import { NamedRoutesService } from 'ng-named-routes';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RouteTest';
+  public getRoute: (...any) => string;
+
+
+  constructor(private namedRoutesService: NamedRoutesService) {
+    this.getRoute = namedRoutesService.getRoute.bind(namedRoutesService);
+  }
 }

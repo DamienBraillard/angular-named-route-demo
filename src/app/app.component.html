@@ -7,9 +7,9 @@
 </div>
 <hr/>
 <div>
-  <a [routerLink]="['home']" routerLinkActive="current">Home</a>
-  <a [routerLink]="['foo']" routerLinkActive="current">Foo</a>
-  <a [routerLink]="['bar']" routerLinkActive="current">Bar</a>
+  <a [routerLink]="getRoute('route.home')" routerLinkActive="current">Home</a>
+  <a [routerLink]="getRoute('route.foo')" routerLinkActive="current">Foo</a>
+  <a [routerLink]="getRoute('route.bar')" routerLinkActive="current">Bar</a>
 </div>
 <hr/>
 <router-outlet></router-outlet>
